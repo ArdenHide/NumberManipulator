@@ -1,0 +1,12 @@
+language: csharp
+mono: none
+dotnet: 6.0
+
+install:
+  - dotnet restore
+
+script:
+  - dotnet tool install --global coveralls.net --version 2.0.0
+  - export PATH="$PATH:/home/travis/.dotnet/tools"
+  - dotnet test --collect:"XPlat Code Coverage"
+  - bash <(curl -s https://codecov.io/bash) -t 3c881649-0d23-4b5b-a39f-195b78971443
