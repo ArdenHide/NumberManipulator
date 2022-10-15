@@ -45,8 +45,8 @@ public static class Core
         Application.Current.Shutdown();
     }
 
-    public static void PrintButtonText()
+    public static void PrintButtonText(TextBox display, Button button)
     {
-
+        display.Text += button.Content.ToString();
     }
 }
