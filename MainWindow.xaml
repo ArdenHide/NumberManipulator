@@ -209,14 +209,14 @@
                 Height="Auto"/>
 
             <Button
-                Grid.Column="2"
+                Grid.Column="1"
                 Content="="
                 FontSize="18"
                 Margin="4 4"
                 Height="Auto"/>
 
             <Button
-                Grid.Column="1"
+                Grid.Column="2"
                 Content="+"
                 FontSize="18"
                 Margin="4 4"

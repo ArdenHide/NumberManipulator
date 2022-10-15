@@ -32,11 +32,11 @@ public partial class MainWindow : Window
 
     private void Clear(object sender, RoutedEventArgs e)
     {
-        Core.Clear();
+        Core.Clear(display);
     }
 
     private void Remove(object sender, RoutedEventArgs e)
     {
-        Core.RemoveLast();
+        Core.RemoveLast(display);
     }
 }
