@@ -13,16 +13,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NumberManipulator
+namespace NumberManipulator;
+
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
+
+    private void Exit(object sender, RoutedEventArgs e)
+    {
+        Core.Exit();
+    }
+
+    private void Clear(object sender, RoutedEventArgs e)
+    {
+        Core.Clear();
+    }
+
+    private void Remove(object sender, RoutedEventArgs e)
+    {
+        Core.RemoveLast();
     }
 }
