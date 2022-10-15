@@ -44,4 +44,9 @@ public static class Core
     {
         Application.Current.Shutdown();
     }
+
+    public static void PrintButtonText()
+    {
+
+    }
 }
