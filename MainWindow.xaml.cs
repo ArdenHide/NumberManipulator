@@ -39,4 +39,14 @@ public partial class MainWindow : Window
     {
         Core.RemoveLast(display);
     }
+
+    private void PrintButtonText(object sender, RoutedEventArgs e)
+    {
+        Core.PrintButtonText(display, (Button)sender);
+    }
+
+    private void Calculate(object sender, RoutedEventArgs e)
+    {
+        Core.Calculate(display, (Button)sender);
+    }
 }

@@ -87,28 +87,32 @@
                 Content="7"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="1"
                 Content="8"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="2"
                 Content="9"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="3"
                 Content="/"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="Calculate"/>
 
         </Grid>
 
@@ -116,10 +120,10 @@
         <Grid
             Grid.Row="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="65"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <Button
@@ -127,28 +131,32 @@
                 Content="4"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="1"
                 Content="5"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="2"
                 Content="6"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="3"
                 Content="*"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="Calculate"/>
 
         </Grid>
 
@@ -167,28 +175,32 @@
                 Content="1"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="1"
                 Content="2"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="2"
                 Content="3"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="3"
                 Content="-"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="Calculate"/>
 
         </Grid>
 
@@ -206,21 +218,24 @@
                 Content="0"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="PrintButtonText"/>
 
             <Button
                 Grid.Column="1"
                 Content="="
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="Calculate"/>
 
             <Button
                 Grid.Column="2"
                 Content="+"
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="Calculate"/>
 
         </Grid>
     </Grid>
