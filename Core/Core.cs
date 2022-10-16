@@ -154,7 +154,7 @@ public static class Core
             int result = firstNumber / secondNumber;
 
             display.Text = $"{result} {@operator} ";
-            return
+            return;
         }
     }
 }
