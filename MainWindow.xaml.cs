@@ -44,4 +44,9 @@ public partial class MainWindow : Window
     {
         Core.PrintButtonText(display, (Button)sender);
     }
+
+    private void Calculate(object sender, RoutedEventArgs e)
+    {
+        Core.Calculate(display, (Button)sender);
+    }
 }

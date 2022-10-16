@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace NumberManipulator;
@@ -48,5 +49,112 @@ public static class Core
     public static void PrintButtonText(TextBox display, Button button)
     {
         display.Text += button.Content.ToString();
+    }
+
+    public static void Calculate(TextBox display, Button button)
+    {
+        char @operator = Convert.ToChar(button.Content.ToString());
+        string txt = display.Text.Trim();
+
+        if (string.IsNullOrEmpty(txt))
+        {
+            return;
+        }
+
+        // Если это первое вхождение оператора, добавляем оператор на дисплей
+        if (!txt.Contains("+")
+            && !txt.Contains("-")
+            && !txt.Contains("*")
+            && !txt.Contains("/"))
+        {
+            display.Text += " ";
+            display.Text += @operator;
+            display.Text += " ";
+            return;
+        }
+
+        // Если эо первое вхождение, но при этом нужно перезаписать символ, а не произвести вычисления
+        if (txt.EndsWith("+"))
+        {
+            display.Text = display.Text.Replace('+', @operator);
+            return;
+        }
+        else if (txt.EndsWith("-"))
+        {
+            display.Text = display.Text.Replace('-', @operator);
+            return;
+        }
+        else if (txt.EndsWith("*"))
+        {
+            display.Text = display.Text.Replace('*', @operator);
+            return;
+        }
+        else if (txt.EndsWith("/"))
+        {
+            display.Text = display.Text.Replace('/', @operator);
+            return;
+        }
+
+        // Произвести вычисления в случае если уже имеется оператор 
+        if (txt.Contains("+"))
+        {
+            int startPos = txt.IndexOf('+');
+
+            string parseFirst = txt.Substring(0, startPos).Trim();
+            int firstNumber = Convert.ToInt32(parseFirst);
+
+            string parseSecond = txt.Substring(startPos + 1, txt.Length - startPos - 1).Trim();
+            int secondNumber = Convert.ToInt32(parseSecond);
+
+            int result = firstNumber + secondNumber;
+
+            display.Text = $"{result} {@operator} ";
+            return;
+        }
+        else if (txt.Contains("-"))
+        {
+            int startPos = txt.IndexOf('-');
+
+            string parseFirst = txt.Substring(0, startPos).Trim();
+            int firstNumber = Convert.ToInt32(parseFirst);
+
+            string parseSecond = txt.Substring(startPos + 1, txt.Length - startPos - 1).Trim();
+            int secondNumber = Convert.ToInt32(parseSecond);
+
+            int result = firstNumber - secondNumber;
+
+            display.Text = $"{result} {@operator} ";
+            return;
+        }
+        else if (txt.Contains("*"))
+        {
+            int startPos = txt.IndexOf('*');
+
+            string parseFirst = txt.Substring(0, startPos).Trim();
+            int firstNumber = Convert.ToInt32(parseFirst);
+
+            string parseSecond = txt.Substring(startPos + 1, txt.Length - startPos - 1).Trim();
+            int secondNumber = Convert.ToInt32(parseSecond);
+
+            int result = firstNumber * secondNumber;
+
+            display.Text = $"{result} {@operator} ";
+            return;
+        }
+        else if (txt.Contains("/"))
+        {
+            int startPos = txt.IndexOf('/');
+
+            string parseFirst = txt.Substring(0, startPos).Trim();
+            int firstNumber = Convert.ToInt32(parseFirst);
+
+            string parseSecond = txt.Substring(startPos + 1, txt.Length - startPos - 1).Trim();
+            int secondNumber = Convert.ToInt32(parseSecond);
+
+            int result = firstNumber / secondNumber;
+
+            display.Text = $"{result} {@operator} ";
+            return;
+        }
     }
 }

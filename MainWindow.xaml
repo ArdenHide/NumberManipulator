@@ -112,7 +112,7 @@
                 FontSize="18"
                 Margin="4 4"
                 Height="Auto"
-                Click="PrintButtonText"/>
+                Click="Calculate"/>
 
         </Grid>
 
@@ -120,10 +120,10 @@
         <Grid
             Grid.Row="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="65"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <Button
@@ -156,7 +156,7 @@
                 FontSize="18"
                 Margin="4 4"
                 Height="Auto"
-                Click="PrintButtonText"/>
+                Click="Calculate"/>
 
         </Grid>
 
@@ -200,7 +200,7 @@
                 FontSize="18"
                 Margin="4 4"
                 Height="Auto"
-                Click="PrintButtonText"/>
+                Click="Calculate"/>
 
         </Grid>
 
@@ -226,7 +226,8 @@
                 Content="="
                 FontSize="18"
                 Margin="4 4"
-                Height="Auto"/>
+                Height="Auto"
+                Click="Calculate"/>
 
             <Button
                 Grid.Column="2"
@@ -234,7 +235,7 @@
                 FontSize="18"
                 Margin="4 4"
                 Height="Auto"
-                Click="PrintButtonText"/>
+                Click="Calculate"/>
 
         </Grid>
     </Grid>
